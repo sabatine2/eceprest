@@ -24,38 +24,64 @@ define(function(){
 		groups: [
 			// SignUp API 
 			{
-				name: "Produto",
+				name: "Base de Conhecimento",
 				endpoints: [
 					{
 						label: "Geral",
-						url: "/produto",
+						url: "/ordem/baseconhecimento",
 						method: "POST, GET, PUT, DELETE",
-						description: "Os campos são",
+						description: "Os campos que podem ser acessados na URL /ordem/baseconhecimento sao os seguintes:",
 						params: [
 							{
-								name: "Id",
-								description: "Identifiador do produto",
-								multiValue: false
+								name: "id",
+								description: "Identificador da Base de conhecimento.",
+								type: "long",
 							},
 							{
-								name: "Nome",
-								description: "Nome do produto",
-								multiValue: false
+								name: "codigo",
+								description: "Codigo da Base de Conhecimento.",
+								type: "char",
 							},
 							{
-								name: "Descrição",
-								description: "Descrição do produto",
-								multiValue: false
+								name: "dataCriacao",
+								description: "Data em que a base de conhecimento foi criada.",
+								type: "UNIX timestamp"
+								
 							},
 							{
-								name: "Marca",
-								description: "Marca do produto",
-								multiValue: false
+								name: "dataAlteracao",
+								description: "Data da ultima alteracao da base de conhecimento.",
+								type: "UNIX timestamp"
 							},
 							{
-								name: "Código de Barra",
-								description: "Código do produto",
-								multiValue: false
+								name: "statusModel",
+								description: "Status da Base de Conhecimento.",
+								type: "int"
+							},
+							{
+								name: "permitidoExcluir",
+								description: "Flag que determina se a Base de Conhecimento pode ser excluida.",
+								type: "boolean"
+							},
+							{
+								name: "permitidoAlterar",
+								description: "Flag que determina se a Base de Conhecimento pode ser alterada.",
+								type: "boolean"
+							},
+							{
+								name: "titulo",
+								description: "Titulo da base de conhecimento.",
+								type: "char"
+							},
+							{
+								name: "tipo",
+								description: "Tipo da base de conhecimento.",
+								type: "char"
+							},
+							{
+								name: "mensagem",
+								description: "Mensagem contida na base de conhecimento.",
+								type: "char"
 							}
 						]
 					},
