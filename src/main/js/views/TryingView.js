@@ -21,6 +21,8 @@ define([
 			"form" : ".try-form",
 			"tryResult" : ".try-result",
 			"tryResultText" : ".try-result-text",
+			"tryReturns" : ".try-return",
+			"tryReturnsText" : ".try-return-text",
 			"inputs" : ".trying-input",
 			"status" : ".try-result-status"
 		},
@@ -60,6 +62,7 @@ define([
 					method: endpoint.get("method"),
 					description: endpoint.get("description"),
 					result: endpoint.get("result"),
+					returns: endpoint.get("returns"),
 					dynamicParams: endpoint.get("dynamicParams"),
 					params: this.getAllParams( endpoint ),
 					errors: this.getAllErrors( endpoint )
@@ -201,11 +204,40 @@ define([
 
 				// Try to auto format result
 				if( result ) {
-					if( result.charAt(0) == "{" ) {
+					//if( result.charAt(0) == "{" ) {
 						this.formatJSON();
-					} else if( result.charAt(0) == "<" ) {
-						this.formatXML();
-					}
+					//} else if( result.charAt(0) == "<" ) {
+					//	this.formatXML();
+					//}
+				}
+
+			}
+		},
+		
+		showReturns: function(returns, contentType, url) {
+
+			if( contentType && contentType.indexOf("image/") == 0 ) {
+
+				// Image content type? Create image element.
+				this.$tryReturns
+					.empty()
+					.append(
+						$("<h2/>").addClass("try-title").text("Result"),
+						$("<img/>").attr("src", url)
+					);
+
+			} else {
+
+				// Show result
+				this.$tryReturnsText.val(returns);
+
+				// Try to auto format result
+				if( result ) {
+					//if( result.charAt(0) == "{" ) {
+						this.formatJSON();
+					//} else if( result.charAt(0) == "<" ) {
+					//	this.formatXML();
+					//}
 				}
 
 			}

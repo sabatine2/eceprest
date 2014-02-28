@@ -13,7 +13,8 @@ define(function(){
 			params: [],
 			errors: [],
 			contentType: "application/x-www-form-urlencoded",
-			result: ""
+			result: "",
+			returns: ""
 		},
 
 		getLabel: function() {

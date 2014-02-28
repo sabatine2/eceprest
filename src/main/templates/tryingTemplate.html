@@ -96,12 +96,21 @@
 </form>
 
 <div class="try-result">
-	Exemplo:
+	Send:
 	<span class="try-result-formatters">
 		Format:
 		<button class="try-format-json">JSON</button>
 	</span>
 	<textarea class="try-result-text">[<%= method %>] <%= result %></textarea>
+</div>
+
+<div class="try-return">
+	Returns:
+	<span class="try-return-formatters">
+		Format:
+		<button class="try-format-json">JSON</button>
+	</span>
+	<textarea class="try-return-text">[<%= method %>] <%= returns %></textarea>
 </div>
 
 <% if( errors.length > 0 ) { %>

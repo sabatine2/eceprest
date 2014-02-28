@@ -64,6 +64,7 @@ define(function(){
 						url: "/produto",
 						method: "POST",
 						result:"{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"Home Advanced 1Mbps\"}",
+						returns: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"OLHA ESSA PORRA CARA\"}",
 						description: "Criação de uma base de conhecimento",
 					},
 					{
@@ -94,6 +95,7 @@ define(function(){
 						url: "/produto/{id}",
 						method: "GET",
 						description: "List",
+						returns: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"OLHA ESSA PORRA CARA\"}",
 						params: [
 							{
 								name: "id",
