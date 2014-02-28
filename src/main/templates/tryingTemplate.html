@@ -101,7 +101,7 @@
 		Format:
 		<button class="try-format-json">JSON</button>
 	</span>
-	<textarea class="try-result-text">[<%= method %>] <%= result %></textarea>
+	<textarea class="try-result-text"><%= result %></textarea>
 </div>
 
 <div class="try-return">
@@ -110,7 +110,7 @@
 		Format:
 		<button class="try-format-json">JSON</button>
 	</span>
-	<textarea class="try-return-text">[<%= method %>] <%= returns %></textarea>
+	<textarea class="try-return-text"><%= returns %></textarea>
 </div>
 
 <% if( errors.length > 0 ) { %>
