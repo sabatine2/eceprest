@@ -14,6 +14,7 @@ define([
 			"click .try-param-add" : "duplicateParam",
 			"click .try-param-remove" : "removeParam",
 			"click .try-format-json" : "formatJSON",
+			"click .try-format-json2" : "formatJSON2",
 			"click .try-format-xml" : "formatXML"
 		},
 
@@ -248,6 +249,17 @@ define([
 			try{
 				var formatedVal = vkbeautify.json( this.$tryResultText.val() );
 				this.$tryResultText.val( formatedVal );
+				//JSON.stringify(JSON.parse(text), null, '\t');
+			} catch (e) {
+				alert("Invalid format!");
+			}
+		},
+		
+		formatJSON2: function() {
+
+			try{
+				var formatedVal = vkbeautify.json( this.$tryReturnsText.val() );
+				this.$tryReturnsText.val( formatedVal );
 				//JSON.stringify(JSON.parse(text), null, '\t');
 			} catch (e) {
 				alert("Invalid format!");
