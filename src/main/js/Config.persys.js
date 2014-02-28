@@ -166,7 +166,7 @@ define(function(){
 						url: "/produto/{id}",
 						method: "GET",
 						description: "Pesquisar uma base de conhecimento a partir do seu ID.",
-						result: "{\"id\":\"1\",\"codigo\":\"PBSC0\",\"dataCriacao\":\"1391457415467\",\"dataAlteracao\":\"1391605534367\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Externa Rompido Externo\",\"tipo\":\"Interno\",\"mensagem\":\"Cabo de rede ou óptico rompido do Poste de entrada, para fora.\n\"}",
+						returns: "{\"id\":\"1\",\"codigo\":\"PBSC0\",\"dataCriacao\":\"1391457415467\",\"dataAlteracao\":\"1391605534367\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Externa Rompido Externo\",\"tipo\":\"Interno\",\"mensagem\":\"Cabo de rede ou óptico rompido do Poste de entrada, para fora.\n\"}",
 						description: "Pesquisar uma base de conhecimento a partir do seu ID",
 						params: [
 							{
