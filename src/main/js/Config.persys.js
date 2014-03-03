@@ -89,13 +89,8 @@ define(function(){
 						label: "Incluir",
 						url: "/ordem/baseconhecimento",
 						method: "POST",
-<<<<<<< Upstream, based on origin/modificacoes_interface
 						result:"{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"Home Advanced 1Mbps\"}",
 						returns: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"OLHA ISSO\"}",
-						description: "Criação de uma base de conhecimento",
-=======
-						
-						result:"{\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"titulo\": \"TITULO DA BASE DE CONHECIMENTO\",\"tipo\": \"Interno\",\"mensagem\": \"DESCRICAO DA BASE DE CONHECIMENTO\"}",
 						description: "Ao utilizar o metodo POST na URL acima, em conjunto com os campos abaixo, uma nova base de conhecimento e criada.",
 						params: [
 									{
@@ -135,7 +130,6 @@ define(function(){
 										required: "true",
 									}
 								]
->>>>>>> e34be5f Rebased
 					},
 					{
 						label: "Listar",
@@ -171,13 +165,9 @@ define(function(){
 						label: "Pesquisa por ID",
 						url: "/produto/{id}",
 						method: "GET",
-<<<<<<< Upstream, based on origin/modificacoes_interface
-						description: "List",
-						returns: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"OLHA ISSO\"}",
-=======
 						description: "Pesquisar uma base de conhecimento a partir do seu ID",
-						returns: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"OLHA ESSA PORRA CARA\"}",
->>>>>>> e34be5f Rebased
+						result: "",
+						returns: "",
 						params: [
 							{
 								name: "id",
