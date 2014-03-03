@@ -87,32 +87,83 @@ define(function(){
 					},
 					{
 						label: "Incluir",
-						url: "/produto",
+						url: "/ordem/baseconhecimento",
 						method: "POST",
+<<<<<<< Upstream, based on origin/modificacoes_interface
 						result:"{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"Home Advanced 1Mbps\"}",
 						returns: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"OLHA ISSO\"}",
 						description: "Criação de uma base de conhecimento",
+=======
+						
+						result:"{\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"titulo\": \"TITULO DA BASE DE CONHECIMENTO\",\"tipo\": \"Interno\",\"mensagem\": \"DESCRICAO DA BASE DE CONHECIMENTO\"}",
+						description: "Ao utilizar o metodo POST na URL acima, em conjunto com os campos abaixo, uma nova base de conhecimento e criada.",
+						params: [
+									{
+										name: "statusModel",
+										description: "Status da Base de Conhecimento.",
+										type: "int",
+										required: "true",
+									},
+									{
+										name: "permitidoExcluir",
+										description: "Flag que determina se a Base de Conhecimento pode ser excluida.",
+										type: "boolean",
+										required: "true",
+									},
+									{
+										name: "permitidoAlterar",
+										description: "Flag que determina se a Base de Conhecimento pode ser alterada.",
+										type: "boolean",
+										required: "true",
+									},
+									{
+										name: "titulo",
+										description: "Titulo da base de conhecimento.",
+										type: "char",
+										required: "true",
+									},
+									{
+										name: "tipo",
+										description: "Tipo da base de conhecimento.",
+										type: "char",
+										required: "true",
+									},
+									{
+										name: "mensagem",
+										description: "Mensagem contida na base de conhecimento.",
+										type: "char",
+										required: "true",
+									}
+								]
+>>>>>>> e34be5f Rebased
 					},
 					{
-						label: "Lista",
-						url: "/produto",
+						label: "Listar",
+						url: "/ordem/baseconhecimento",
 						method: "GET",
-						description: "List",
+						result: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PBSC0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Externa Rompido Externo\",\"tipo\":\"Interno\"},{\"id\":\"2\",\"codigo\":\"PBSC1\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Interna Rompido \",\"tipo\":\"Externo\"}],\"paging\":{\"@numberPages\":\"1\",\"@number\":\"15\",\"@page\":\"1\",\"@type\":\"application/json\"}}",
+						description: "Listar todas as bases de conhecimento cadastradas. Podem ser utilizados os seguintes filtros:",
 						params: [
 							{
+								
+								name: "since",
+								description: "Filtrar pela data da ultima alteracao da Base de Conhecimento. Formato dd/mm/yyy.",
+								type: "timestamp",
+							},
+							{
 								name: "offset",
-								description: "Identifiador do produto",
-								multiValue: false
+								description: "Filtrar a partir do numero de um resultado especifico.",
+								type: "int",
 							},
 							{
 								name: "limit",
-								description: "Nome do produto",
-								multiValue: false
+								description: "Limitar o numero de resultados buscados.",
+								type: "int",
 							},
 							{
-								name: "since",
-								description: "Descrição do produto",
-								multiValue: false
+								name: "status",
+								description: "Filtrar pelo status da Base de Conhecimento.",
+								type: "int",
 							}
 						]
 					},
@@ -120,13 +171,18 @@ define(function(){
 						label: "Pesquisa por ID",
 						url: "/produto/{id}",
 						method: "GET",
+<<<<<<< Upstream, based on origin/modificacoes_interface
 						description: "List",
 						returns: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"OLHA ISSO\"}",
+=======
+						description: "Pesquisar uma base de conhecimento a partir do seu ID",
+						returns: "{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"OLHA ESSA PORRA CARA\"}",
+>>>>>>> e34be5f Rebased
 						params: [
 							{
 								name: "id",
-								description: "Identifiador do produto",
-								multiValue: false
+								description: "Identificador da base de conhecimento",
+								type: "long"
 							}
 						]
 					},
