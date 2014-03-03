@@ -98,6 +98,7 @@ define(function(){
 										description: "Status da Base de Conhecimento.",
 										type: "int",
 										required: "true",
+										modifiable: "true",
 									},
 									{
 										name: "permitidoExcluir",
