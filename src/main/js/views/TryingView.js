@@ -70,12 +70,28 @@ define([
 				}) )
 				.append( footerTemplate )
 				.appendTo( $("body") );
-
+				
 			this.reloadElements();
 
 			// Hide result, when there is a upload
 			if( this.hasUpload() ) {
 				this.$tryResult.hide();
+			}
+			
+			try{
+				var formatedVal = vkbeautify.json( this.$tryResultText.val() );
+				this.$tryResultText.val( formatedVal );
+				//JSON.stringify(JSON.parse(text), null, '\t');
+			} catch (e) {
+				alert("Invalid format!");
+			}
+			
+			try{
+				var formatedVal = vkbeautify.json( this.$tryReturnsText.val() );
+				this.$tryReturnsText.val( formatedVal );
+				//JSON.stringify(JSON.parse(text), null, '\t');
+			} catch (e) {
+				alert("Invalid format!");
 			}
 		},
 
@@ -205,11 +221,11 @@ define([
 
 				// Try to auto format result
 				if( result ) {
-					//if( result.charAt(0) == "{" ) {
+					if( result.charAt(0) == "{" ) {
 						this.formatJSON();
-					//} else if( result.charAt(0) == "<" ) {
-					//	this.formatXML();
-					//}
+					} else if( result.charAt(0) == "<" ) {
+						this.formatXML();
+					}
 				}
 
 			}
@@ -223,22 +239,22 @@ define([
 				this.$tryReturns
 					.empty()
 					.append(
-						$("<h2/>").addClass("try-title").text("Result"),
+						$("<h2/>").addClass("try-title").text("Returns"),
 						$("<img/>").attr("src", url)
 					);
 
 			} else {
 
-				// Show result
+				// Show returns
 				this.$tryReturnsText.val(returns);
 
-				// Try to auto format result
-				if( result ) {
-					//if( result.charAt(0) == "{" ) {
+				// Try to auto format returns
+				if( returns ) {
+					if( returns.charAt(0) == "{" ) {
 						this.formatJSON();
-					//} else if( result.charAt(0) == "<" ) {
-					//	this.formatXML();
-					//}
+					} else if( returns.charAt(0) == "<" ) {
+						this.formatXML();
+					}
 				}
 
 			}

@@ -98,8 +98,6 @@
 <div class="try-result">
 	Send:
 	<span class="try-result-formatters">
-		Format:
-		<button class="try-format-json">JSON</button>
 	</span>
 	<textarea class="try-result-text"><%= result %></textarea>
 </div>
@@ -107,10 +105,8 @@
 <div class="try-return">
 	Returns:
 	<span class="try-return-formatters">
-		Format:
-		<button class="try-format-json2">JSON</button>
 	</span>
-	<textarea class="try-return-text"><%= returns %></textarea>
+	<textarea class="try-return-text try-format-json2"><%= returns %></textarea>
 </div>
 
 <% if( errors.length > 0 ) { %>

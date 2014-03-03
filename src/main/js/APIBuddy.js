@@ -1,5 +1,6 @@
 define([
 	"Config.persys",
+	//"Config2.persys",
 	"routers/AppRouter",
 	"views/EndpointsView",
 	"views/TryingView",
@@ -7,7 +8,7 @@ define([
 	"controllers/ParamsController",
 	"controllers/ErrorsController",
 	"helpers/BackboneHelpers"
-],function(Config, AppRouter, EndpointsView, TryingView, GroupsController, ParamsController, ErrorsController, BackboneHelpers) {
+],function(Config, /*Config2,*/ AppRouter, EndpointsView, TryingView, GroupsController, ParamsController, ErrorsController, BackboneHelpers) {
 
 	window.APIBuddy = {
 
@@ -22,6 +23,14 @@ define([
 			GroupsController.parseGroups( Config.groups );
 			ParamsController.parseGlobalParams( Config.globalParams );
 			ErrorsController.parseGlobalErrors( Config.globalErrors );
+			
+			// Register Config globally, to make it easier to access 
+			// window.Config2 = Config2;
+
+			// Parse config data
+			// GroupsController.parseGroups( Config2.groups );
+			// ParamsController.parseGlobalParams( Config2.globalParams );
+			// ErrorsController.parseGlobalErrors( Config2.globalErrors );
 
 			// Init views
 			new TryingView();
