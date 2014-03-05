@@ -41,11 +41,11 @@ define(function(){
 			}
 			
 			if(this.get("insert")) {
-				desc = desc + ' (INSERT)';
-			}
-
-			if (this.get("required")) {
-				desc = desc + ' (REQUIRED)';
+				if (this.get("required")) {
+					desc = desc + ' (INSERT - REQUIRED)';
+				} else {
+					desc = desc + ' (INSERT)';
+				}
 			}
 			
 			if (this.get("modifiable")) {
