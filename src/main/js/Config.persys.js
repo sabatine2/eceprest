@@ -41,6 +41,8 @@ define(function(){
 								name: "codigo",
 								description: "Código da Base de Conhecimento.",
 								type: "string [255]",
+								modifiable: true,
+								insert: true,
 							},
 							{
 								name: "dataCriacao",
@@ -58,6 +60,7 @@ define(function(){
 								description: "Status da Base de Conhecimento.",
 								type: "int",
 								insert: true,
+								modifiable: true,
 							},
 							{
 								name: "permitidoExcluir",
