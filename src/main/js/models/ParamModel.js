@@ -13,6 +13,7 @@ define(function(){
 			multiValue: false,
 			multipart: false,
 			required: false,
+			insert: false,
 			modifiable: false,
 			type: null,
 			headerParam: false,
@@ -38,6 +39,9 @@ define(function(){
 				desc = desc + ' (HEADER PARAM)';
 				
 			}
+			
+			if(this.get("insert")) {
+				desc = desc + ' (INSERT)'
 
 			if (this.get("required")) {
 				desc = desc + ' (REQUIRED)';
