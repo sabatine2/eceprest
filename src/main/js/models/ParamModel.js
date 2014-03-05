@@ -41,7 +41,8 @@ define(function(){
 			}
 			
 			if(this.get("insert")) {
-				desc = desc + ' (INSERT)'
+				desc = desc + ' (INSERT)';
+			}
 
 			if (this.get("required")) {
 				desc = desc + ' (REQUIRED)';
