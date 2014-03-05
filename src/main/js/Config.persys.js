@@ -93,44 +93,8 @@ define(function(){
 						returns:"{\"id\":\"21\",\"codigo\":\"PBSC20\",\"dataCriacao\":\"1393596044194\",\"dataAlteracao\":\"1393596044194\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"TITULO DA BASE DE CONHECIMENTO\",\"tipo\":\"Interno\",\"mensagem\":\"BASE DE CONHECIMENTO NOVA\"}",
 						description: "Ao utilizar o metodo POST na URL acima, em conjunto com os campos abaixo, uma nova base de conhecimento e criada.",
 						params: [
-									{
-										name: "statusModel",
-										description: "Status da Base de Conhecimento.",
-										type: "int",
-										required: "true",
-										modifiable: "true",
-									},
-									{
-										name: "permitidoExcluir",
-										description: "Flag que determina se a Base de Conhecimento pode ser excluida.",
-										type: "boolean",
-										required: "true",
-									},
-									{
-										name: "permitidoAlterar",
-										description: "Flag que determina se a Base de Conhecimento pode ser alterada.",
-										type: "boolean",
-										required: "true",
-									},
-									{
-										name: "titulo",
-										description: "Titulo da base de conhecimento.",
-										type: "char",
-										required: "true",
-									},
-									{
-										name: "tipo",
-										description: "Tipo da base de conhecimento.",
-										type: "char",
-										required: "true",
-									},
-									{
-										name: "mensagem",
-										description: "Mensagem contida na base de conhecimento.",
-										type: "char",
-										required: "true",
-									}
-								]
+
+						]
 					},
 					{
 						label: "Listar",
@@ -170,11 +134,7 @@ define(function(){
 						returns: "{\"id\":\"1\",\"codigo\":\"PBSC0\",\"dataCriacao\":\"1391457415467\",\"dataAlteracao\":\"1391605534367\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Externa Rompido Externo\",\"tipo\":\"Interno\",\"mensagem\":\"Cabo de rede ou �ptico rompido do Poste de entrada, para fora.\n\"}",
 						description: "Pesquisar uma base de conhecimento a partir do seu ID",
 						params: [
-							{
-								name: "id",
-								description: "Identificador da base de conhecimento.",
-								type: "long"
-							}
+
 						]
 					},
 					{
@@ -185,11 +145,7 @@ define(function(){
 						result: "{\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"titulo\": \"TITULO DA BASE DE CONHECIMENTO MODIFICADO\",\"tipo\": \"Interno\",\"mensagem\": \"BASE DE CONHECIMENTO MODIFICADA\"}",
 						returns: "{\"id\":\"19\",\"codigo\":\"\",\"dataCriacao\":\"1393422672704\",\"dataAlteracao\":\"1393597662334\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"TITULO DA BASE DE CONHECIMENTO MODIFICADO\",\"tipo\":\"Interno\",\"mensagem\":\"BASE DE CONHECIMENTO MODIFICADA\"}",
 						params: [
-							{
-								name: "id",
-								description: "Identificador da Base de Conhecimento.",
-								type: "long",
-							}
+
 						]
 					},
 					{
@@ -198,11 +154,7 @@ define(function(){
 						method: "DELETE",
 						description: "Remover uma Base de Conhecimento a partir do seu ID.",
 						params: [
-							{
-								name: "id",
-								description: "Identifiador da Base de Conhecimento.",
-								type: "long",
-							}
+
 						]
 					}
 				]
