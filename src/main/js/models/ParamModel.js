@@ -52,6 +52,8 @@ define(function(){
 				desc = desc + ' (MODIFIABLE)';
 			}
 			
+			desc = desc + '.';
+			
 			return desc;
 		}
 
