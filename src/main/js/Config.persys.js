@@ -30,7 +30,7 @@ define(function(){
 						label: "Geral",
 						url: "/ordem/baseconhecimento",
 						method: "POST, GET, PUT, DELETE",
-						description: "Os campos que podem ser acessados na URL /ordem/baseconhecimento sao os seguintes:",
+						description: "Os campos que podem ser acessados na URL /ordem/baseconhecimento são os seguintes:",
 						params: [
 							{
 								name: "id",
@@ -39,49 +39,61 @@ define(function(){
 							},
 							{
 								name: "codigo",
-								description: "Codigo da Base de Conhecimento.",
-								type: "char",
+								description: "Código da Base de Conhecimento.",
+								type: "string [255]",
 							},
 							{
 								name: "dataCriacao",
 								description: "Data em que a base de conhecimento foi criada.",
-								type: "UNIX timestamp"
+								type: "long [UNIX timestamp]"
 								
 							},
 							{
 								name: "dataAlteracao",
-								description: "Data da ultima alteracao da base de conhecimento.",
-								type: "UNIX timestamp"
+								description: "Data da última alteração da base de conhecimento.",
+								type: "long [UNIX timestamp]"
 							},
 							{
 								name: "statusModel",
 								description: "Status da Base de Conhecimento.",
-								type: "int"
+								type: "int",
+								insert: true,
 							},
 							{
 								name: "permitidoExcluir",
-								description: "Flag que determina se a Base de Conhecimento pode ser excluida.",
-								type: "boolean"
+								description: "Flag que determina se a Base de Conhecimento pode ser excluída.",
+								type: "boolean",
+								insert: true,
 							},
 							{
 								name: "permitidoAlterar",
 								description: "Flag que determina se a Base de Conhecimento pode ser alterada.",
-								type: "boolean"
+								type: "boolean",
+								insert: true,
+								
 							},
 							{
 								name: "titulo",
-								description: "Titulo da base de conhecimento.",
-								type: "char"
+								description: "Título da base de conhecimento.",
+								type: "string [100]",
+								insert: true,
+								required: true,
+								modifiable: true,
 							},
 							{
 								name: "tipo",
 								description: "Tipo da base de conhecimento.",
-								type: "char"
+								type: "string [20]",
+								insert: true,
+								modifiable: true,
 							},
 							{
 								name: "mensagem",
 								description: "Mensagem contida na base de conhecimento.",
-								type: "char"
+								type: "string [1000]",
+								insert: true,
+								required: true,
+								modifiable: true,
 							}
 						]
 					},
@@ -89,9 +101,9 @@ define(function(){
 						label: "Incluir",
 						url: "/ordem/baseconhecimento",
 						method: "POST",
-						result:"{\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"titulo\": \"TITULO DA BASE DE CONHECIMENTO\",\"tipo\": \"Interno\",\"mensagem\": \"DESCRICAO DA BASE DE CONHECIMENTO\"}",
+						result:"{\"titulo\": \"TITULO DA BASE DE CONHECIMENTO\",\"tipo\": \"Interno\",\"mensagem\": \"DESCRICAO DA BASE DE CONHECIMENTO\"}",
 						returns:"{\"id\":\"21\",\"codigo\":\"PBSC20\",\"dataCriacao\":\"1393596044194\",\"dataAlteracao\":\"1393596044194\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"TITULO DA BASE DE CONHECIMENTO\",\"tipo\":\"Interno\",\"mensagem\":\"BASE DE CONHECIMENTO NOVA\"}",
-						description: "Ao utilizar o metodo POST na URL acima, em conjunto com os campos abaixo, uma nova base de conhecimento e criada.",
+						description: "Ao utilizar o método POST na URL acima, em conjunto com os campos abaixo, uma nova base de conhecimento é criada.",
 						params: [
 
 						]
@@ -106,17 +118,17 @@ define(function(){
 							{
 								
 								name: "since",
-								description: "Filtrar pela data da ultima alteracao da Base de Conhecimento. Formato dd/mm/yyy.",
+								description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato dd/mm/yyy.",
 								type: "timestamp",
 							},
 							{
 								name: "offset",
-								description: "Filtrar a partir do numero de um resultado especifico.",
+								description: "Filtrar a partir do número de um resultado específico.",
 								type: "int",
 							},
 							{
 								name: "limit",
-								description: "Limitar o numero de resultados buscados.",
+								description: "Limitar o número de resultados buscados.",
 								type: "int",
 							},
 							{
