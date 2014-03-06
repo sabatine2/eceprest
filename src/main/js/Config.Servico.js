@@ -42,7 +42,8 @@ define(function(){
 								name: "codigo",
 								description: "Código do serviço.",
 								type: "string[255]",
-								insert: true
+								insert: true,
+								modifiable: true
 							},
 							{
 								name: "dataCriacao",
@@ -58,7 +59,8 @@ define(function(){
 								name: "statusModel",
 								description: "Status do serviço (0 = inativo, 1 = ativo, 2 = removido).",
 								type: "int",
-								insert: true
+								insert: true,
+								modifiable: true
 							},
 							{
 								name: "permitidoExcluir",
@@ -78,19 +80,20 @@ define(function(){
 								description: "Titulo do serviço.",
 								type: "string[100]",
 								required: true,
-								insert: true
+								insert: true,
+								modifiable: true
 							},
 							{
 								name: "descricao",
 								description: "Descrição do serviço.",
 								type: "string[5000]",
-								insert: true
+								insert: true,
+								modifiable: true
 							},
 							{
 								name: "servicoProcedimento",
 								description: "Lista de procedimentos do serviço.",
-								type: "array",
-								insert: true
+								type: "array"
 							}
 						]
 					},
