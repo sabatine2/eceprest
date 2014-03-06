@@ -103,7 +103,7 @@ define(function(){
 						method: "POST",
 						result: "{\"codigo\":\"747\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Novo Servico\",\"descricao\":\"Criando Novo Servico\"}",
 						returns: "{\"id\":\"2\",\"codigo\":\"747\",\"dataCriacao\":\"1394109166399\",\"dataAlteracao\":\"1394109166399\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Novo Servico\",\"descricao\":\"Criando Novo Servico\"}",
-						description: "Ao utilizar o método POST na URL acima, em conjunto com os campos abaixo, um novo serviço é criada.",
+						description: "Ao utilizar o método POST na URL acima, é possível criar um serviço novo.",
 					},
 					{
 						label: "Lista",
@@ -114,19 +114,19 @@ define(function(){
 						params: [
 							{
 								name: "since",
-								description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato dd/mm/yyy."
+								description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato dd/mm/yyy. Valor padrão: \"01/01/1900\"."
 							},
 							{
 								name: "offset",
-								description: "Filtrar a partir do número de um resultado específico."
+								description: "Filtrar a partir do número de um resultado específico. Valor padrão: \"0\"."
 							},
 							{
 								name: "limit",
-								description: "Limitar o número de resultados buscados."
+								description: "Limitar o número de resultados buscados. Valor padrão: \"100\"."
 							},
 							{
 								name: "status",
-								description: "Status 0 Inativo, 1 Ativo, 2 Removido"
+								description: "Status 0 Inativo, 1 Ativo, 2 Removido. Valor padrão: \"2\"."
 							}
 							
 						]

@@ -111,7 +111,7 @@ define(function(){
 						method: "POST",
 						result: "{\"nome\":\"Novo produto\",\"descricao\":\"Criando novo produto.\",\"marca\":\"Novo\",\"codigoBarra\":\"000111\"}",
 						returns: "{\"id\":\"15\",\"codigo\":\"PPRO17\",\"dataCriacao\":\"1394021653153\",\"dataAlteracao\":\"1394021653153\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"Novo produto\",\"descricao\":\"Criando novo produto.\",\"marca\":\"Novo\",\"codigoBarra\":\"000111\"}",
-						description: "Ao utilizar o método POST na URL acima, em conjunto com os campos abaixo, um novo produto é criado.",
+						description: "Ao utilizar o método POST na URL acima, é possível criar um produto novo.",
 					},
 					{
 						label: "Lista",
@@ -122,22 +122,22 @@ define(function(){
 						params: [
 							{
 								name: "since",
-								description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato dd/mm/yyy.",
+								description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato dd/mm/yyy. Valor padrão: \"01/01/1900\".",
 								type: "timestamp"
 							},
 							{
 								name: "offset",
-								description: "Filtrar a partir do número de um resultado específico.",
+								description: "Filtrar a partir do número de um resultado específico. Valor padrão: \"0\".",
 								type: "int"
 							},
 							{
 								name: "limit",
-								description: "Limitar o número de resultados buscados.",
+								description: "Limitar o número de resultados buscados. Valor padrão: \"10\".",
 								type: "int"
 							},
 							{
 								name: "status",
-								description: "Status: 0 Inativo, 1 Ativo, 2 Removido.",
+								description: "Status: 0 Inativo, 1 Ativo, 2 Removido. Valor padrão: \"2\".",
 								type: "int"
 							}
 							
