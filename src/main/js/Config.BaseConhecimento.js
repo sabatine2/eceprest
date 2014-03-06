@@ -57,7 +57,7 @@ define(function(){
 							},
 							{
 								name: "statusModel",
-								description: "Status da Base de Conhecimento.",
+								description: "Status da Base de Conhecimento (0 = inativo, 1 = ativo, 2 = removido).",
 								type: "int",
 								insert: true,
 								modifiable: true,
@@ -136,7 +136,7 @@ define(function(){
 							},
 							{
 								name: "status",
-								description: "Filtrar pelo status da Base de Conhecimento.",
+								description: "Status: 0 Inativo, 1 Ativo, 2 Removido.",
 								type: "int",
 							}
 						]

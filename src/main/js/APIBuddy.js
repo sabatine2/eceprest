@@ -1,5 +1,5 @@
 define([
-	"Config.persys",
+	"Config.Produto",
 	//"Config2.persys",
 	"routers/AppRouter",
 	"views/EndpointsView",
