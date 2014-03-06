@@ -46,7 +46,7 @@ define(function(){
 							},
 							{
 								name: "dataCriacao",
-								description: "Data de cadastro do produto.",
+								description: "Data em que o produto foi cadastrado.",
 								type: "long [UNIX timestamp]",
 							},
 							{
@@ -118,21 +118,21 @@ define(function(){
 						url: "/produto",
 						method: "GET",
 						returns:"{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"Home Advanced 1Mbps\"}",
-						description: "Esse método lista todos os produtos.",
+						description: "Listar todas os produtos cadastrados. Podem ser utilizados os seguintes filtros:",
 						params: [
 							{
 								name: "since",
-								description: "Um timestamp (mm/dd/YYYY hh:mm) valor que aponta para o inicio do intervalo de dados baseados em tempo.",
+								description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato dd/mm/yyy.",
 								type: "timestamp"
 							},
 							{
 								name: "offset",
-								description: "Valor inicial.",
+								description: "Filtrar a partir do número de um resultado específico.",
 								type: "int"
 							},
 							{
 								name: "limit",
-								description: "Este é o número de objetos individuais que são retornados em cada página.",
+								description: "Limitar o número de resultados buscados.",
 								type: "int"
 							},
 							{

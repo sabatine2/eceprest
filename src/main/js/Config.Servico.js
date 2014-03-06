@@ -35,7 +35,7 @@ define(function(){
 						params: [
 							{
 								name: "id",
-								description: "Identifiador do serviço.",
+								description: "Identificador do serviço.",
 								type: "long"
 							},
 							{
@@ -47,13 +47,13 @@ define(function(){
 							},
 							{
 								name: "dataCriacao",
-								description: "Data de cadastro do serviço.",
-								type: "Unix timestamp"
+								description: "Data em que o serviço foi cadastrado",
+								type: "long [UNIX timestamp]"
 							},
 							{
 								name: "dataAlteracao",
 								description: "Data da última alteração do serviço.",
-								type: "Unix timestamp"
+								type: "long [UNIX timestamp]"
 							},
 							{
 								name: "statusModel",
@@ -64,13 +64,13 @@ define(function(){
 							},
 							{
 								name: "permitidoExcluir",
-								description: "Se o serviço pode ser exclúido.",
+								description: "Flag que determina se o serviço pode ser exclúido.",
 								type: "boolean",
 								insert: true
 							},
 							{
 								name: "permitidoAlterar",
-								description: "Se o serviço pode ser alterado.",
+								description: "Flag que determina se o serviço pode ser alterado.",
 								type: "boolean",
 								insert: true
 							},
@@ -103,7 +103,7 @@ define(function(){
 						method: "POST",
 						result: "{\"codigo\":\"747\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Novo Servico\",\"descricao\":\"Criando Novo Servico\"}",
 						returns: "{\"id\":\"2\",\"codigo\":\"747\",\"dataCriacao\":\"1394109166399\",\"dataAlteracao\":\"1394109166399\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Novo Servico\",\"descricao\":\"Criando Novo Servico\"}",
-						description: "Com o método POST, pode-se criar um novo serviço.",
+						description: "Ao utilizar o método POST na URL acima, em conjunto com os campos abaixo, um novo serviço é criada.",
 					},
 					{
 						label: "Lista",
@@ -114,15 +114,15 @@ define(function(){
 						params: [
 							{
 								name: "since",
-								description: "Um timestamp (mm/dd/YYYY hh:mm) valor que aponta para o inicio do intervalo de dados baseados em tempo."
+								description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato dd/mm/yyy."
 							},
 							{
 								name: "offset",
-								description: "Valor inicial"
+								description: "Filtrar a partir do número de um resultado específico."
 							},
 							{
 								name: "limit",
-								description: "Este e o número de objetos individuais que são retornados em cada página"
+								description: "Limitar o número de resultados buscados."
 							},
 							{
 								name: "status",
@@ -135,7 +135,7 @@ define(function(){
 						label: "Pesquisa por ID",
 						url: "/servico/{id}",
 						method: "GET",
-						result:"{\"id\": \"1\",\"codigo\": \"PSER0\",\"dataCriacao\": \"1391482744594\",\"dataAlteracao\": \"1391523433108\",\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"titulo\": \"Migracao para Rede FTTH\",\"descricao\": \"Migracao de Radio para FTTH ou GEPON, para Combinado ou somente Internet com Fidelidade.\",\"servicoProcedimento\": [{\"id\": \"4\",\"codigo\": \"1_2\",\"dataCriacao\": \"1391491984047\",\"dataAlteracao\": \"1391491984047\",\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"obrigatorio\": \"true\",\"anexo\": \"false\",\"servico\": null},{\"id\": \"3\",\"codigo\": \"POS13914918048212\",\"dataCriacao\": \"1391491804821\",\"dataAlteracao\": \"1391491804821\",\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"obrigatorio\": \"true\",\"anexo\": \"false\",\"servico\": null}]}",
+						returns:"{\"id\": \"1\",\"codigo\": \"PSER0\",\"dataCriacao\": \"1391482744594\",\"dataAlteracao\": \"1391523433108\",\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"titulo\": \"Migracao para Rede FTTH\",\"descricao\": \"Migracao de Radio para FTTH ou GEPON, para Combinado ou somente Internet com Fidelidade.\",\"servicoProcedimento\": [{\"id\": \"4\",\"codigo\": \"1_2\",\"dataCriacao\": \"1391491984047\",\"dataAlteracao\": \"1391491984047\",\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"obrigatorio\": \"true\",\"anexo\": \"false\",\"servico\": null},{\"id\": \"3\",\"codigo\": \"POS13914918048212\",\"dataCriacao\": \"1391491804821\",\"dataAlteracao\": \"1391491804821\",\"statusModel\": \"1\",\"permitidoExcluir\": \"true\",\"permitidoAlterar\": \"true\",\"obrigatorio\": \"true\",\"anexo\": \"false\",\"servico\": null}]}",
 						description: "Pesquisar um serviço a partir do seu ID.",
 					},
 					{

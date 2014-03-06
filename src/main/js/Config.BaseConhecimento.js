@@ -46,7 +46,7 @@ define(function(){
 							},
 							{
 								name: "dataCriacao",
-								description: "Data em que a base de conhecimento foi criada.",
+								description: "Data em que a base de conhecimento foi cadastrada.",
 								type: "long [UNIX timestamp]"
 								
 							},
@@ -143,7 +143,7 @@ define(function(){
 					},
 					{
 						label: "Pesquisar por ID",
-						url: "/produto/{id}",
+						url: "/ordem/baseconhecimento/{id}",
 						method: "GET",
 						description: "Pesquisar uma base de conhecimento a partir do seu ID.",
 						returns: "{\"id\":\"1\",\"codigo\":\"PBSC0\",\"dataCriacao\":\"1391457415467\",\"dataAlteracao\":\"1391605534367\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Externa Rompido Externo\",\"tipo\":\"Interno\",\"mensagem\":\"Cabo de rede ou �ptico rompido do Poste de entrada, para fora.\n\"}",
@@ -154,7 +154,7 @@ define(function(){
 					},
 					{
 						label: "Alterar por ID",
-						url: "/produto/{id}",
+						url: "/ordem/baseconhecimento/{id}",
 						method: "PUT",
 						description: "Alterar uma base de conhecimento a partir do seu ID.",
 						result: "{\"titulo\": \"TITULO DA BASE DE CONHECIMENTO MODIFICADO\",\"tipo\": \"Interno\",\"mensagem\": \"BASE DE CONHECIMENTO MODIFICADA\"}",
@@ -165,7 +165,7 @@ define(function(){
 					},
 					{
 						label: "Remover por ID",
-						url: "/produto/{id}",
+						url: "/ordem/baseconhecimento/{id}",
 						method: "DELETE",
 						description: "Remover uma Base de Conhecimento a partir do seu ID.",
 						params: [
