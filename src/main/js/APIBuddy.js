@@ -1,5 +1,5 @@
 define([
-	"Config.BaseConhecimento",
+	"Config.persys",
 	//"Config2.persys",
 	"routers/AppRouter",
 	"views/EndpointsView",
