@@ -1,5 +1,5 @@
 define([
-	"Config.persys",
+	"Config.Persys",
 	"routers/AppRouter",
 	"views/EndpointsView",
 	"views/TryingView",
