@@ -95,45 +95,59 @@
 	</table>
 </form>
 
-<div class="try-result">
-	Send:
-	<span class="try-result-formatters">
-	</span>
-	<textarea class="try-result-text"><%= result %></textarea>
-</div>
+<% if(result) { %>
 
-<div class="try-return">
-	Returns:
-	<span class="try-return-formatters">
-	</span>
-	<textarea class="try-return-text"><%= returns %></textarea>
-</div>
+	<div class="try-result">
+		Send:
+		<span class="try-result-formatters">
+		</span>
+		<textarea class="try-result-text"><%= result %></textarea>
+	</div>
+
+<% } %>
+
+<% if(returns) { %>
+	<div class="try-return">
+		Returns:
+		<span class="try-return-formatters">
+		</span>
+		<textarea class="try-return-text"><%= returns %></textarea>
+	</div>
+	
+<% } %>
+
 
 <% if( errors.length > 0 ) { %>
-	<h2 class="try-title">Errors</h2>
 	
-	<ul class="try-errors">
-		<% _.each(errors, function(error) { %>
+	<!-- especifico para a seção de informações -->
+	<% if(method!="-") { %>
+	
+		<h2 class="try-title">Errors</h2>
+		
+		<ul class="try-errors">
+			<% _.each(errors, function(error) { %>
 
-			<li>
-				<%= error.get("label") %>
-				<ul>
+				<li>
+					<%= error.get("label") %>
+					<ul>
 
-					<%
-						var descriptions = error.get("description");
+						<%
+							var descriptions = error.get("description");
 
-						if( !_.isArray( descriptions ) ) {
-							descriptions = [descriptions];
-						}
+							if( !_.isArray( descriptions ) ) {
+								descriptions = [descriptions];
+							}
 
-						_.each(descriptions, function(description){ %>
-							<li><%= description %></li>
-						<% });
-					%>
+							_.each(descriptions, function(description){ %>
+								<li><%= description %></li>
+							<% });
+						%>
 
-				</ul>
-			</li>
+					</ul>
+				</li>
 
-		<% }); %>
-	</ul>
+			<% }); %>
+		</ul>
+	
+	<% } %>
 <% } %>

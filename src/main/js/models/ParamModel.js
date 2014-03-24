@@ -33,11 +33,12 @@ define(function(){
 
 			var desc = this.get("description");
 			
-			desc = desc + ' Type: ' + this.get("type");
+			if(this.get("type")) {
+				desc = desc + ' Type: ' + this.get("type");
+			}
 
 			if (this.get("headerParam")) {
 				desc = desc + ' (HEADER PARAM)';
-				
 			}
 			
 			if(this.get("insert")) {

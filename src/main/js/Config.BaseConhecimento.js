@@ -5,7 +5,7 @@ window.configGroups.push({
 			label: "Geral",
 			url: "/ordem/baseconhecimento",
 			method: "POST, GET, PUT, DELETE",
-			description: "Os campos que podem ser acessados na URL /ordem/baseconhecimento sÃ£o os seguintes:",
+			description: "Os campos que podem ser acessados na URL /ordem/baseconhecimento são os seguintes:",
 			params: [
 				{
 					name: "id",
@@ -14,7 +14,7 @@ window.configGroups.push({
 				},
 				{
 					name: "codigo",
-					description: "CÃ³digo da Base de Conhecimento.",
+					description: "Código da Base de Conhecimento.",
 					type: "string [255]",
 					modifiable: true,
 					insert: true,
@@ -27,7 +27,7 @@ window.configGroups.push({
 				},
 				{
 					name: "dataAlteracao",
-					description: "Data da Ãºltima alteraÃ§Ã£o da base de conhecimento.",
+					description: "Data da última alteração da base de conhecimento.",
 					type: "long [UNIX timestamp]"
 				},
 				{
@@ -39,7 +39,7 @@ window.configGroups.push({
 				},
 				{
 					name: "permitidoExcluir",
-					description: "Flag que determina se a Base de Conhecimento pode ser excluÃ­da.",
+					description: "Flag que determina se a Base de Conhecimento pode ser excluída.",
 					type: "boolean",
 					insert: true,
 				},
@@ -52,7 +52,7 @@ window.configGroups.push({
 				},
 				{
 					name: "titulo",
-					description: "TÃ­tulo da base de conhecimento.",
+					description: "Título da base de conhecimento.",
 					type: "string [100]",
 					insert: true,
 					required: true,
@@ -73,6 +73,9 @@ window.configGroups.push({
 					required: true,
 					modifiable: true,
 				}
+			],
+			errors: [
+				
 			]
 		},
 		{
@@ -81,7 +84,7 @@ window.configGroups.push({
 			method: "POST",
 			result:"{\"titulo\": \"TITULO DA BASE DE CONHECIMENTO\",\"tipo\": \"Interno\",\"mensagem\": \"DESCRICAO DA BASE DE CONHECIMENTO\"}",
 			returns:"{\"id\":\"21\",\"codigo\":\"PBSC20\",\"dataCriacao\":\"1393596044194\",\"dataAlteracao\":\"1393596044194\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"TITULO DA BASE DE CONHECIMENTO\",\"tipo\":\"Interno\",\"mensagem\":\"BASE DE CONHECIMENTO NOVA\"}",
-			description: "Ao utilizar o mÃ©todo POST na URL acima, Ã© possÃ­vel criar uma Base de Conhecimento nova.",
+			description: "Ao utilizar o método POST na URL acima, é possível criar uma Base de Conhecimento nova.",
 			params: [
 
 			]
@@ -96,22 +99,22 @@ window.configGroups.push({
 				{
 					
 					name: "since",
-					description: "Filtrar pela data da Ãºltima alteracao da Base de Conhecimento. Formato dd/mm/yyy. Valor padrÃ£o: \"01/01/1900\".",
+					description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato mm/dd/yyy. Valor padrão: \"01/01/1900\".",
 					type: "timestamp",
 				},
 				{
 					name: "offset",
-					description: "Filtrar a partir do nÃºmero de um resultado especÃ­fico. Valor padrÃ£o: \"0\".",
+					description: "Filtrar a partir do número de um resultado específico. Valor padrão: \"0\".",
 					type: "int",
 				},
 				{
 					name: "limit",
-					description: "Limitar o nÃºmero de resultados buscados. Valor padrÃ£o: \"100\".",
+					description: "Limitar o número de resultados buscados. Valor padrão: \"100\".",
 					type: "int",
 				},
 				{
 					name: "status",
-					description: "Status: 0 Inativo, 1 Ativo, 2 Removido. Valor padrÃ£o: \"2\".",
+					description: "Status: 0 Inativo, 1 Ativo, 2 Removido. Valor padrão: \"2\".",
 					type: "int",
 				}
 			]
@@ -121,7 +124,7 @@ window.configGroups.push({
 			url: "/ordem/baseconhecimento/{id}",
 			method: "GET",
 			description: "Pesquisar uma base de conhecimento a partir do seu ID.",
-			returns: "{\"id\":\"1\",\"codigo\":\"PBSC0\",\"dataCriacao\":\"1391457415467\",\"dataAlteracao\":\"1391605534367\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Externa Rompido Externo\",\"tipo\":\"Interno\",\"mensagem\":\"Cabo de rede ou ï¿½ptico rompido do Poste de entrada, para fora.\n\"}",
+			returns: "{\"id\":\"1\",\"codigo\":\"PBSC0\",\"dataCriacao\":\"1391457415467\",\"dataAlteracao\":\"1391605534367\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Externa Rompido Externo\",\"tipo\":\"Interno\",\"mensagem\":\"Cabo de rede ou óptico rompido do Poste de entrada, para fora.\n\"}",
 			description: "Pesquisar uma base de conhecimento a partir do seu ID",
 			params: [
 

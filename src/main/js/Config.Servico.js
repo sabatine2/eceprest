@@ -89,7 +89,7 @@ window.configGroups.push({
 			params: [
 				{
 					name: "since",
-					description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato dd/mm/yyy. Valor padrão: \"01/01/1900\"."
+					description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato mm/dd/yyy. Valor padrão: \"01/01/1900\"."
 				},
 				{
 					name: "offset",

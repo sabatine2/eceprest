@@ -83,7 +83,7 @@ define([
 				this.$tryResultText.val( formatedVal );
 				//JSON.stringify(JSON.parse(text), null, '\t');
 			} catch (e) {
-				alert("Invalid format!");
+				//alert("Invalid format!");
 			}
 			
 			try{
@@ -91,7 +91,7 @@ define([
 				this.$tryReturnsText.val( formatedVal );
 				//JSON.stringify(JSON.parse(text), null, '\t');
 			} catch (e) {
-				alert("Invalid format!");
+				//alert("Invalid format!");
 			}
 		},
 

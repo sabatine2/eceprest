@@ -23,8 +23,6 @@ define(function(){
 			}
 		],
 
-		
-
 	};
 
 	return Config;
