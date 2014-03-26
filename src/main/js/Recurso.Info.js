@@ -3,7 +3,7 @@ window.configGroups.push({
 	endpoints: [
 		{
 			label: "Tags",
-			url: "Informa&#231&#245es gerais",
+			url: "Informações gerais",
 			method: "-",
 			description: "Aqui estão descritas as (TAGS) encontradas na documentação.",
 			params: [
