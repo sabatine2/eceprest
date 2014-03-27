@@ -1,36 +1,11 @@
-define(function(){
-
-	var Config = {
-
-		url: "http://localhost:8080/OsManagerWeb/api",
-		
-		traditionalSerialization: true,
-
-		globalErrors: [
-			{
-				label: "400 - Bad Request",
-				description: "Malformed request: the request you attempted to make, was not identified from the server."
-			},
-			{
-				label: "403 - Forbidden",
-				description: "Forbidden. You don't have permission to access this content."
-			},
-			{
-				label: "401 - Unauthorized",
-				description: "Unauthorized. You need to be logged in."
-			}
-		],
-
-		groups: [
-			// SignUp API 
-			{
+window.configGroups.push({
 				name: "Procedimento",
 				endpoints: [
 					{
 						label: "Geral",
 						url: "servico/{id}/procedimento",
 						method: "POST, GET, PUT, DELETE",
-						description: "Os campos que podem ser acessados na URL servico/{id}/procedimento sÃ£o os seguintes:",
+						description: "Os campos que podem ser acessados na URL servico/{id}/procedimento são os seguintes:",
 						params: [
 							{
 								name: "id",
@@ -39,7 +14,7 @@ define(function(){
 							},
 							{
 								name: "codigo",
-								description: "CÃ³digo do Procedimento.",
+								description: "Código do Procedimento.",
 								type: "string [255]",
 							},
 							{
@@ -50,7 +25,7 @@ define(function(){
 							},
 							{
 								name: "dataAlteracao",
-								description: "Data da Ãºltima alteraÃ§Ã£o do procedimento.",
+								description: "Data da última alteração do procedimento.",
 								type: "long [UNIX timestamp]"
 							},
 							{
@@ -60,7 +35,7 @@ define(function(){
 							},
 							{
 								name: "permitidoExcluir",
-								description: "Flag que determina se o procedimento pode ser excluÃ­do.",
+								description: "Flag que determina se o procedimento pode ser excluído.",
 								type: "boolean",
 							},
 							{
@@ -70,23 +45,17 @@ define(function(){
 								
 							},
 							{
-								name: "titulo",
-								description: "TÃ­tulo do procedimento.",
-								type: "string [100]",
+								name: "obrigatorio",
+								description: "Se o procedimento é ou não obrigatório.",
+								type: "boolean",
 							},
 							{
-								name: "nota",
-								description: "Nota do procedimento.",
-								type: "string [1000]",
+								name: "anexo",
+								description: "Se o procedimento possui ou não anexo.",
+								type: "boolean",
 							}
 						]
 					}
 				]
-			}
-	     ]
-
-	};
-
-	return Config;
 
 });
