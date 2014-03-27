@@ -32,7 +32,7 @@ window.configGroups.push({
 				},
 				{
 					name: "statusModel",
-					description: "Status da Base de Conhecimento (0 = inativo, 1 = ativo, 2 = removido).",
+					description: "Status da Base de Conhecimento.",
 					type: "int",
 					insert: true,
 					modifiable: true,
@@ -60,7 +60,7 @@ window.configGroups.push({
 				},
 				{
 					name: "tipo",
-					description: "Tipo da base de conhecimento.",
+					description: "Tipo da base de conhecimento (interna ou externa).",
 					type: "string [20]",
 					insert: true,
 					modifiable: true,
@@ -97,7 +97,6 @@ window.configGroups.push({
 			description: "Listar todas as bases de conhecimento cadastradas. Podem ser utilizados os seguintes filtros:",
 			params: [
 				{
-					
 					name: "since",
 					description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato mm/dd/yyy. Valor padrão: \"01/01/1900\".",
 					type: "timestamp",
@@ -114,16 +113,16 @@ window.configGroups.push({
 				},
 				{
 					name: "status",
-					description: "Status: 0 Inativo, 1 Ativo, 2 Removido. Valor padrão: \"2\".",
+					description: "Filtrar a partir do status da Base de Conhecimento. Valor padrão: \"2\".",
 					type: "int",
 				}
 			]
 		},
 		{
-			label: "Pesquisar por ID",
+			label: "Listar por ID",
 			url: "/ordem/baseconhecimento/{id}",
 			method: "GET",
-			description: "Pesquisar uma base de conhecimento a partir do seu ID.",
+			description: "Listar uma base de conhecimento a partir do seu ID.",
 			returns: "{\"id\":\"1\",\"codigo\":\"PBSC0\",\"dataCriacao\":\"1391457415467\",\"dataAlteracao\":\"1391605534367\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"titulo\":\"Cabo de Rede Externa Rompido Externo\",\"tipo\":\"Interno\",\"mensagem\":\"Cabo de rede ou óptico rompido do Poste de entrada, para fora.\n\"}",
 			description: "Pesquisar uma base de conhecimento a partir do seu ID",
 			params: [
@@ -148,6 +147,44 @@ window.configGroups.push({
 			description: "Remover uma Base de Conhecimento a partir do seu ID.",
 			params: [
 
+			]
+		},
+		{
+			label: "Buscar",
+			url: "/ordem/baseconhecimento/busca",
+			method: "GET",
+			description: "Busca uma Base de Conhecimento a partir dos parâmetros listados a seguir. É necessário informar no mínimo um parâmetro para efetuar uma busca.",
+			params: [
+				{
+					name: "titulo",
+					description: "Efetua uma busca pelo título. Mínimo de três caracteres.",
+					type: "string",
+				},
+				{
+					name: "mensagem",
+					description: "Efetua uma busca pela mensagem. Mínimo de um caractere.",
+					type: "string",
+				},
+				{
+					name: "since",
+					description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato mm/dd/yyy. Valor padrão: \"01/01/1900\".",
+					type: "timestamp",
+				},
+				{
+					name: "offset",
+					description: "Filtrar a partir do número de um resultado específico. Valor padrão: \"0\".",
+					type: "int",
+				},
+				{
+					name: "limit",
+					description: "Limitar o número de resultados buscados. Valor padrão: \"100\".",
+					type: "int",
+				},
+				{
+					name: "status",
+					description: "Status da Base de Conhecimento. Valor padrão: \"2\".",
+					type: "int",
+				}
 			]
 		}
 	]
