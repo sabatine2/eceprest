@@ -32,7 +32,7 @@ window.configGroups.push({
 				},
 				{
 					name: "statusModel",
-					description: "Status do serviço (0 = inativo, 1 = ativo, 2 = removido).",
+					description: "Status do serviço.",
 					type: "int",
 					insert: true,
 					modifiable: true
@@ -68,7 +68,7 @@ window.configGroups.push({
 				{
 					name: "servicoProcedimento",
 					description: "Procedimentos referentes ao serviço.",
-					type: "Lista de Procedimentos"
+					type: "Lista de Procedimentos."
 				}
 			]
 		},
@@ -101,7 +101,7 @@ window.configGroups.push({
 				},
 				{
 					name: "status",
-					description: "Status 0 Inativo, 1 Ativo, 2 Removido. Valor padrão: \"2\"."
+					description: "Filtrar a partir do status do serviço. Valor padrão: \"2\"."
 				}
 				
 			]

@@ -32,10 +32,10 @@ window.configGroups.push({
 				},
 				{
 					name: "statusModel",
-					description: "Status da Departamento (0 = inativo, 1 = ativo, 2 = removido).",
+					description: "Status do departamento.",
 					type: "int",
 					insert: true,
-					modifiable: true,
+					modifiable: true
 				},
 				{
 					name: "permitidoExcluir",
@@ -158,7 +158,7 @@ window.configGroups.push({
 				},
 				{
 					name: "status",
-					description: "Status: 0 Inativo, 1 Ativo, 2 Removido. Valor padrão: \"2\".",
+					description: "Filtrar a partir do status do departamento. Valor padrão: \"2\".",
 					type: "int",
 				}
 			]

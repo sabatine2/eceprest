@@ -30,8 +30,10 @@ window.configGroups.push({
 							},
 							{
 								name: "statusModel",
-								description: "Status do procedimento (0 = inativo, 1 = ativo, 2 = removido).",
+								description: "Status do procedimento.",
 								type: "int",
+								insert: true,
+								modifiable: true
 							},
 							{
 								name: "permitidoExcluir",

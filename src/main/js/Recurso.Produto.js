@@ -5,7 +5,7 @@ window.configGroups.push({
 			label: "Geral",
 			url: "/produto",
 			method: "POST, GET, PUT, DELETE",
-			description: "Os campos que podem ser acessados na URL /ordem/produto sÃ£o os seguintes:",
+			description: "Os campos que podem ser acessados na URL /ordem/produto são os seguintes:",
 			params: [
 				{
 					name: "id",
@@ -14,7 +14,7 @@ window.configGroups.push({
 				},
 				{
 					name: "codigo",
-					description: "CÃ³digo do produto.",
+					description: "Código do produto.",
 					type: "string[255]",
 					insert: true,
 					modifiable: true
@@ -26,25 +26,25 @@ window.configGroups.push({
 				},
 				{
 					name: "dataAlteracao",
-					description: "Data da Ãºltima alteraÃ§Ã£o do produto.",
+					description: "Data da última alteração do produto.",
 					type: "long [UNIX timestamp]",
 				},
 				{
 					name: "statusModel",
-					description: "Status do produto (0 = inativo, 1 = ativo, 2 = removido).",
+					description: "Status do produto.",
 					type: "int",
 					insert: true,
 					modifiable: true
 				},
 				{
 					name: "permitidoExcluir",
-					description: "Flag que determina se o produto pode ser excluÃ­do.",
+					description: "Flag que determina se o produto pode ser excluído.",
 					type: "boolean",
 					insert: true
 				},
 				{
 					name: "permitidoAlterar",
-					description: "Flag que determina se o produto pode ser excluÃ­do.",
+					description: "Flag que determina se o produto pode ser excluído.",
 					type: "boolean",
 					insert: true
 				},
@@ -59,7 +59,7 @@ window.configGroups.push({
 				},
 				{
 					name: "descricao",
-					description: "DescriÃ§Ã£o do produto.",
+					description: "Descrição do produto.",
 					type: "string[250]",
 					insert: true,
 					modifiable: true
@@ -73,7 +73,7 @@ window.configGroups.push({
 				},
 				{
 					name: "codigoBarra",
-					description: "CÃ³digo de barras do produto.",
+					description: "Código de barras do produto.",
 					type: "string[30]",
 					insert: true,
 					modifiable: true
@@ -86,33 +86,33 @@ window.configGroups.push({
 			method: "POST",
 			result: "{\"nome\":\"Novo produto\",\"descricao\":\"Criando novo produto.\",\"marca\":\"Novo\",\"codigoBarra\":\"000111\"}",
 			returns: "{\"id\":\"15\",\"codigo\":\"PPRO17\",\"dataCriacao\":\"1394021653153\",\"dataAlteracao\":\"1394021653153\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"Novo produto\",\"descricao\":\"Criando novo produto.\",\"marca\":\"Novo\",\"codigoBarra\":\"000111\"}",
-			description: "Ao utilizar o mÃ©todo POST na URL acima, Ã© possÃ­vel criar um produto novo.",
+			description: "Ao utilizar o método POST na URL acima, é possível criar um produto novo.",
 		},
 		{
 			label: "Lista",
 			url: "/produto",
 			method: "GET",
-			returns:"{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"Home Advanced 1Mbps\"}",
+			returns:"{\"data\":[{\"id\":\"1\",\"codigo\":\"PPRO0\",\"statusModel\":\"1\",\"permitidoExcluir\":\"true\",\"permitidoAlterar\":\"true\",\"nome\":\"Home Advanced 1Mbps\"}]}",
 			description: "Listar todas os produtos cadastrados. Podem ser utilizados os seguintes filtros:",
 			params: [
 				{
 					name: "since",
-					description: "Filtrar pela data da Ãºltima alteracao da Base de Conhecimento. Formato mm/dd/yyy. Valor padrÃ£o: \"01/01/1900\".",
+					description: "Filtrar pela data da última alteracao da Base de Conhecimento. Formato mm/dd/yyy. Valor padrão: \"01/01/1900\".",
 					type: "timestamp"
 				},
 				{
 					name: "offset",
-					description: "Filtrar a partir do nÃºmero de um resultado especÃ­fico. Valor padrÃ£o: \"0\".",
+					description: "Filtrar a partir do número de um resultado específico. Valor padrão: \"0\".",
 					type: "int"
 				},
 				{
 					name: "limit",
-					description: "Limitar o nÃºmero de resultados buscados. Valor padrÃ£o: \"10\".",
+					description: "Limitar o número de resultados buscados. Valor padrão: \"10\".",
 					type: "int"
 				},
 				{
 					name: "status",
-					description: "Status: 0 Inativo, 1 Ativo, 2 Removido. Valor padrÃ£o: \"2\".",
+					description: "Filtrar a partir do status de produto. Valor padrão: \"2\".",
 					type: "int"
 				}
 				
