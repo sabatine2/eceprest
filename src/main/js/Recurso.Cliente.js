@@ -13,7 +13,7 @@ window.configGroups.push({
 					type: "long",
 				},
 				{
-					name: "codigo",
+					name: "COdigo",
 					description: "Código do cliente.",
 					type: "string [255]",
 					modifiable: true,
