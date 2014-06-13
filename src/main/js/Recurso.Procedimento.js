@@ -1,5 +1,5 @@
 window.configGroups.push({
-				name: "Procedimento",
+				name: "CEP",
 				endpoints: [
 					{
 						label: "Geral",
