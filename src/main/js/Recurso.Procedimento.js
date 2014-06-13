@@ -1,5 +1,5 @@
 window.configGroups.push({
-				name: "CEP",
+				name: "Teste CEP",
 				endpoints: [
 					{
 						label: "Geral",
@@ -8,8 +8,8 @@ window.configGroups.push({
 						description: "Os campos que podem ser acessados na URL servico/{id}/procedimento são os seguintes:",
 						params: [
 							{
-								name: "id",
-								description: "Identificador do Procedimento.",
+								name: "cep",
+								description: "Identificador do cep.",
 								type: "long",
 							},
 							{
